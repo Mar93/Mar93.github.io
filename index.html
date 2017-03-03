@@ -1,210 +1,470 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  <title>马佳腾的ABAQUS学习笔记</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="马佳腾的ABAQUS学习笔记">
-<meta property="og:url" content="https://Mar93.github.io/index.html">
-<meta property="og:site_name" content="马佳腾的ABAQUS学习笔记">
-<meta property="og:description">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="马佳腾的ABAQUS学习笔记">
-<meta name="twitter:description">
-  
-    <link rel="alternate" href="/atom.xml" title="马佳腾的ABAQUS学习笔记" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  
+<html lang="en">
 
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="null">
+    <meta name="keyword" content="undefined">
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
+    <link rel="alternate" type="application/atom+xml" title="马佳腾的ABAQUS学习笔记" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        undefined
+        
+    </title>
+
+    <link rel="canonical" href="https://Mar93.github.io/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
 </head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">马佳腾的ABAQUS学习笔记</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">关于ABAQUS二次开发、子程序、子模型等</a>
-        </h2>
-      
+<style>
+
+    header.intro-header {
+        background-image: url('undefined')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "false" data-istags="false
+" data-ishome = "true" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    马佳腾的ABAQUS学习笔记
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+					
+					
+                </ul>
+            </div>
+        </div>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://Mar93.github.io"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-ABAQUS批处理文件" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/03/03/ABAQUS批处理文件/" class="article-date">
-  <time datetime="2017-03-03T11:51:05.761Z" itemprop="datePublished">2017-03-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="ABAQUS批处理文件"><a href="#ABAQUS批处理文件" class="headerlink" title="ABAQUS批处理文件"></a>ABAQUS批处理文件</h1><p>标签： ABAQUS 批处理</p>
-<hr>
-<p>ABAQUS批处理能够对一个或多个inp文件进行提交计算，而批处理文件的建立也非常简单。<br>首先，在inp文件所在文件夹建立一个start.txt的文本文档。如我的inp文件名分别为job-1.inp, job-2.inp。<br>其次，对start.txt文档进行编辑，内容如下:</p>
-<pre><code>call abaqus job=job-1 cpus=4 int
-call abaqus job=job-2 cpus=4 int
-pause
-</code></pre><p>最后，讲start.txt的后缀改为bat 双击运行即可。</p>
-<p>其中int 为interactive，可实现多个job依次运行，去掉int的话多个job同事运行。pause 目的是在计算完成或者出错以后黑窗不被马上关闭，可以看到出错的原因。当然，即便是黑窗被关掉我们也可以通过查看与任务同名的.dat，.sta，.mag文件查看计算过程中出现警告和错误。<br>另外在计算过程中可以随时打开.odb文件查看计算进度。</p>
-<p>ps:对于abaqus不是内部命令问题的解决可以将abaqus.bat文件的路径添加到系统环境路径即可。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://Mar93.github.io/2017/03/03/ABAQUS批处理文件/" data-id="ciztueik90001oghk0on9m1p3" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-这是我的第一篇博客" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/03/03/这是我的第一篇博客/" class="article-date">
-  <time datetime="2017-03-03T09:39:06.174Z" itemprop="datePublished">2017-03-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="这是我的第一篇博客"><a href="#这是我的第一篇博客" class="headerlink" title="这是我的第一篇博客"></a>这是我的第一篇博客</h1><p>标签（空格分隔）： </p>
-<hr>
-<p>This is my first <strong>blog</strong>!</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://Mar93.github.io/2017/03/03/这是我的第一篇博客/" data-id="ciztueijz0000oghk7xxdx68t" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2017/03/03/ABAQUS批处理文件/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/03/03/这是我的第一篇博客/">(no title)</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2017 马佳腾<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
+    <!-- /.container -->
 </nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+
+<style>
+
+    .custom-haojen-container .post-preview:nth-of-type(1),
+    .custom-haojen-container .post-preview-poetry:nth-of-type(1) {
+        text-align: center;
+        background-repeat: no-repeat;
+        border-radius: 3px;
+        background-size: cover;
+        padding: 0;
+        height: 300px;
+        display: table;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.16);
+    }
+
+    /*去掉诗歌的背景图片*/
+    .custom-haojen-container .post-preview-poetry:nth-of-type(1) {
+        background-image: none !important;
+        background-color: rgba(255, 248, 220, 0.5);
+    }
+
+    .custom-haojen-container .post-preview:nth-child(1) h2,
+    .custom-haojen-container .post-preview:nth-child(1) .post-meta,
+    .custom-haojen-container .post-preview:nth-child(1) .post-subtitle {
+        text-shadow: 0 0 40px rgba(0, 0, 0, 1);
+        letter-spacing: 1px;
+        color: #fff;
+        margin-top: 0;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .custom-haojen-container .post-preview:nth-child(1) .post-meta {
+        font-size: .9em;
+        font-weight: 300;
+        margin-top: 0;
+    }
+
+    .custom-haojen-container .post-preview-poetry:nth-child(1) .post-subtitle {
+        letter-spacing: 6px;
+        font-size: 18px;
+        font-family: unset;
+        font-weight: 400;
+        color: rgba(0, 0, 0, .75)
+    }
+
+    /*不显示摘要*/
+    .custom-haojen-container .post-preview:nth-child(1) .post-content-preview {
+        display: none
+    }
+
+    /*只第一个显示背景图片*/
+    .custom-haojen-container .post-preview:not(:nth-child(1)) {
+        background-image: none !important;
+    }
+
+    /*第一个分界线去掉*/
+    .custom-haojen-container hr:nth-of-type(1) {
+        display: none;
+    }
+
+    /*主题*/
+    .custom-haojen-container .post-preview:nth-of-type(1) > a {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    /*诗词标题*/
+    .custom-haojen-container .post-preview-poetry:nth-child(1) h2 {
+        font-size: 35px;
+        font-family: STKaiti;
+        color: rgba(0, 0, 0, .8);
+    }
+
+    .custom-haojen-container .post-preview-poetry:nth-of-type(1) .post-meta {
+        color: #0e2231;
+    }
+
+    @media (max-width: 768px) {
+        .custom-haojen-container .post-preview:nth-child(1) {
+            height: 240px;
+        }
+
+        .custom-haojen-container .post-preview-poetry:nth-child(1) h2 {
+            font-size: 28px !important;
+            margin-top: 0;
+        }
+
+        .custom-haojen-container .post-preview:nth-child(1) .post-subtitle {
+            font-size: 18px;
+            font-weight: 400;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .custom-haojen-container .post-preview:nth-of-type(1) > a {
+            padding: 20px
+        }
+    }
+
+    /*手机屏幕*/
+    @media (max-width: 400px) {
+        .custom-haojen-container .post-preview:nth-child(1) {
+            height: 195px;
+        }
+
+        .custom-haojen-container .post-preview-poetry:nth-child(1) h2 {
+            font-size: 20px !important;
+        }
+
+        .custom-haojen-container .post-preview:nth-child(1) .post-subtitle {
+            font-size: 16px;
+        }
+
+        .custom-haojen-container .post-preview:nth-child(1) a {
+            padding: 30px 20px;
+        }
+    }
+</style>
+
+<!-- Page Header -->
+<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 visible-xs-block visible-sm-block">
+    <div class="row">
+        <header class="intro-header">
+            <div class="container">
+                <div class="site-heading text-center">
+                    <div class="about-me">
+                        <!--移动端头部显示-->
+                        <img src="undefined"/>
+                        <h5><a href="/about/">马佳腾</a></h5>
+                        <p>undefined</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+</div>
+<!-- Main Content -->
+<div class="container custom-haojen-container">
+    <!-- Post Container -->
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12 post-container">
+            <!-- Main Content -->
+
+
+
+<div class="post-preview "
+     style="background-image: url('')">
+    <a href="/2017/03/03/ABAQUS批处理文件/">
+        <h2 class="post-title">
+            未命名
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-03-03
+        </p>
+        
+        <div class="post-content-preview">
+            <p>
+                ABAQUS批处理文件标签： ABAQUS 批处理
+
+ABAQUS批处理能够对一个或多个inp文件进行提交计算，而批处理文件的建立也非常简单。首先，在inp文件所在文件夹建立一个start.txt的文本文档。如我的inp文件名分别为job-1.inp, job-2.inp。其次，对start.t..
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+<div class="post-preview "
+     style="background-image: url('')">
+    <a href="/2017/03/03/这是我的第一篇博客/">
+        <h2 class="post-title">
+            未命名
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-03-03
+        </p>
+        
+        <div class="post-content-preview">
+            <p>
+                这是我的第一篇博客标签（空格分隔）： 
+
+This is my first blog!
+
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+
+<!-- 翻页 pager -->
+
+<ul class="pager">
     
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    
+</ul>
 
 
-<script src="/js/script.js"></script>
+        </div>
+        <!-- Sidebar Container -->
+        <div class="
+                col-lg-3 col-lg-offset-0
+                col-md-3 col-md-offset-0
+                col-sm-12
+                col-xs-12
+                sidebar-container
+            ">
 
-  </div>
+            <!-- About Me -->
+            <section class="visible-md visible-lg" style="padding: 0 18px">
+                <div class="short-about">
+                    <!--侧边栏头像-->
+                    
+                    <h5><a href="/about/">马佳腾</a></h5>
+                    
+                    <hr>
+                    <!-- SNS Link 社交 -->
+                    <ul class="list-inline">
+                        
+                        
+                        
+
+                        
+
+                        
+
+                        
+
+                        
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Featured Tags  标签 -->
+            
+
+            
+
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; 马佳腾的ABAQUS学习笔记 2017
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/blog.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://Mar93.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','undefined','2.0.0');
+</script>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="undefined">
 </body>
+
 </html>
