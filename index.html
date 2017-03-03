@@ -1,236 +1,208 @@
-<!DOCTYPE html>
-<html>
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="">
+
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" 
+src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js">
+</script>
+<link href=  "/plugins/code-theme/tomorrow.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" href="/plugins/github-markdown.css">
+
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   
-  <title>马佳腾的ABAQUS学习笔记</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="马佳腾的ABAQUS学习笔记">
-<meta property="og:url" content="https://Mar93.github.io/index.html">
-<meta property="og:site_name" content="马佳腾的ABAQUS学习笔记">
-<meta property="og:description">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="马佳腾的ABAQUS学习笔记">
-<meta name="twitter:description">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  <link type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/scrollUp/image.css">
-  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+    
+    
+      <link rel="stylesheet" href="/css/legend.css">
+    
   
 </head>
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <div class="logo">
-        <img src="/logo.png" alt="Profile Picture">
-      </div>
-      <div id="title">马佳腾的ABAQUS学习笔记</div>
+
+<body id="body-home-bg">
+<div id="layout-content">
+  <div id="menu-outer-home">
+  <div id="menu-inner">
+    
+    
+    <div id="site-title">
+      马佳腾的ABAQUS学习笔记
+    </div>
+    
+
+     
+    <div>
+    
       
-        <div id="subtitle">关于ABAQUS二次开发、子程序、子模型等</div>
+      <a href="/">首页</a>
       
-       <ul class="my-socials">
-  
- 
-</ul>
+    
+      
+      <a href="/archives">归档</a>
+      
+    
     </div>
   </div>
-  <div id="header-inner" class="">
-    <nav id="main-nav">
-      <a id="main-nav-toggle" class="nav-icon"></a>
-      <!--
-        
-          
-            <a class="main-nav-link" href="/">首页</a>
-          
-            <a class="main-nav-link" href="/categories/life">生活</a>
-          
-            <a class="main-nav-link" href="/archives">归档</a>
-          
-        
-      -->
-    </nav>
-    <nav id="title-nav" style="display:none">
-      <a href="/">马佳腾的ABAQUS学习笔记</a>
-      <img src="/logo.png" alt="Profile Picture">
-      <!--
-      <span id="title-nav-socials">
-        
-       
-     </span>
-      -->
-    </nav>
-    <nav id="sub-nav">
+</div> 
+  <div id="content-outer">
+    <div id="content-inner">
       
-      <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-    </nav>
-    <div id="search-form-wrap">
-      <form action="http://www.baidu.com/baidu" method="get" accept-charset="utf-8" class="search-form">
-        <input type="search" name="word" maxlength="20" class="search-form-input" placeholder="Search">
-        <input type="submit" value="" class="search-form-submit">
-        <input name=tn type=hidden value="bds">
-        <input name=cl type=hidden value="3">
-        <input name=ct type=hidden value="2097152">
-        <input type="hidden" name="si" value="Mar93.github.io">
-      </form>
+      
+  
+
+<video id="bgvideo" autoplay loop poster=/images/background.png>
+  <source src=http://cdn.calm.com/scenes/scene-Qqkzy9k7Eo.mp4?v=1418162238190 type="video/mp4">
+</video>
+
+
+
+
+  <div id="play-button" >
+  <img id="play-img" src="/images/playback_play.png"></img>
+</div>
+<audio id="bgaudio" loop="loop" preload="none"> 
+  <source src=http://cdn.calm.com/scenes/scene-Qqkzy9k7Eo.m4a?v=1418162240715 type="audio/mpeg">
+</audio>
+
+<script>
+$(document).ready(function(){
+  //播放按钮点击
+  var audio = $("#bgaudio")[0];
+  var img = $("#play-img")[0];
+  $("#play-button").click(function(){ 
+    if (audio.paused || audio.ended) {
+      audio.play();
+      img.src = "/images/playback_pause.png";
+    } else {
+      audio.pause();
+      img.src = "/images/playback_play.png";
+    }
+  });
+});
+</script>
+
+
+
+
+<div id="me-button">
+		<img id="play-img" src="/images/me_n.png">
+		</img>
+</div>
+
+<div id="social-div">
+
+
+    
+    
+
+    
+    
+
+    
+    
+
+
+</div>
+
+
+<div id="about-me">
+  <div id="about-me-inner">
+    <article class="markdown-body"></article>
+  </div>
+</div>
+
+
+<!--[if lt IE 9]>
+<script>
+	document.createElement('video');
+</script>
+<![endif]-->
+
+
+<script>
+
+$(document).ready(function(){
+  //判断是否该显示’关于我‘
+  if( "home_about"  == 'home_about') {
+    $("#about-me").hide(0);
+
+    //加载about(关于)读取文件
+    var s = $('article').html();
+    if (s.length < 2) {
+      var url = window.location.protocol+"//"+window.location.host+"/about/";
+      $.ajax({ 
+          type: "GET", 
+          url: url, 
+          dataType: "html", 
+          success: function (data) { 
+            $('article').html($(data).find('article').html());//解析about的html
+            $("#about-me").css({"visibility": "visible"}).delay(100);
+            $("#about-me").slideToggle('slow');
+          }
+      }); 
+      }
+
+    //个人按钮点击，隐藏和显示关于界面
+    $("#me-button").click(function(){ 
+      $("#social-div").slideToggle();
+      $("#about-me").slideToggle();
+    });
+  }
+});
+</script>
+
+
+
     </div>
-  </div>
-  <div class="site-nav" style="display: none;">
-    <ul>
-      
-      
-        <li><a href="/">首页</a></li>
-      
-        <li><a href="/categories/life">生活</a></li>
-      
-        <li><a href="/archives">归档</a></li>
-      
-      
-    </ul>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
 
-    
-    <article id="post-ABAQUS批处理文件" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/03/03/ABAQUS批处理文件/" class="article-date">
-  <time datetime="2017-03-03T11:51:05.761Z" itemprop="datePublished">2017-03-03</time>
-</a>
+    <!-- 多说评论框 -->    
     
   </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="ABAQUS批处理文件"><a href="#ABAQUS批处理文件" class="headerlink" title="ABAQUS批处理文件"></a>ABAQUS批处理文件</h1><p>标签： ABAQUS 批处理</p>
-<hr>
-<p>ABAQUS批处理能够对一个或多个inp文件进行提交计算，而批处理文件的建立也非常简单。<br>首先，在inp文件所在文件夹建立一个start.txt的文本文档。如我的inp文件名分别为job-1.inp, job-2.inp。<br>其次，对start.txt文档进行编辑，内容如下:</p>
-<pre><code>call abaqus job=job-1 cpus=4 int
-call abaqus job=job-2 cpus=4 int
-pause
-</code></pre><p>最后，讲start.txt的后缀改为bat 双击运行即可。</p>
-<p>其中int 为interactive，可实现多个job依次运行，去掉int的话多个job同事运行。pause 目的是在计算完成或者出错以后黑窗不被马上关闭，可以看到出错的原因。当然，即便是黑窗被关掉我们也可以通过查看与任务同名的.dat，.sta，.mag文件查看计算过程中出现警告和错误。<br>另外在计算过程中可以随时打开.odb文件查看计算进度。</p>
-<p>ps:对于abaqus不是内部命令问题的解决可以将abaqus.bat文件的路径添加到系统环境路径即可。</p>
+</div>
 
-      
-    </div>
-    <footer class="article-footer">
-      
-        <a data-url="https://Mar93.github.io/2017/03/03/ABAQUS批处理文件/" data-id="ciztvb8kp0000nghk9a577ud8" class="article-share-link">Share</a>
-      
-
-      
-    </footer>
+<div id="bottom-outer">
+  
+  <div id="bottom-inner">
+    马佳腾 
+    ©2017 |Powered by  
+    <a href="http://hexo.io" target="_blank">Hexo</a> with theme 
+    <a href="https://github.com/iHongRen/legend" target="_blank">legend</a>
   </div>
-  
-</article>
-
-
-    
-  
-
-    
-    <article id="post-这是我的第一篇博客" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/03/03/这是我的第一篇博客/" class="article-date">
-  <time datetime="2017-03-03T09:39:06.174Z" itemprop="datePublished">2017-03-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
     
     
-    <div class="article-entry" itemprop="articleBody">
+    
+      <a href="/atom.xml">
       
-        <h1 id="这是我的第一篇博客"><a href="#这是我的第一篇博客" class="headerlink" title="这是我的第一篇博客"></a>这是我的第一篇博客</h1><p>标签（空格分隔）： </p>
-<hr>
-<p>This is my first <strong>blog</strong>!</p>
-
+      <img src=/images/rss.png height="18" width="18">
       
-    </div>
-    <footer class="article-footer">
-      
-        <a data-url="https://Mar93.github.io/2017/03/03/这是我的第一篇博客/" data-id="ciztvb8ky0001nghkyx8aa1if" class="article-share-link">Share</a>
-      
-
-      
-    </footer>
-  </div>
-  
-</article>
+</div> 
 
 
-    
   
   
-</section>
-        
-      </div>
-      <footer id="footer">
+    <script src="/js/legend.js"></script>
   
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2017 马佳腾<br>
-      Theme <a href="https://github.com/henryhuang/oishi" target="_blank">Oishi</a>, Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <!--
-      <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">首页</a>
-  
-    <a href="/categories/life" class="mobile-nav-link">生活</a>
-  
-    <a href="/archives" class="mobile-nav-link">归档</a>
-  
-</nav>
-    -->
-    
-<!-- 多说公共js代码 start -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"mar93"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] 
-     || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-  </script>
-<!-- 多说公共js代码 end -->
 
 
-<!-- 百度分享 start -->
-
-<!-- 百度分享 end -->
-
-<script src="//cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
-
-
-
-<script src="/js/jquery.scrollUp.min.js"></script>
-<script src="/js/jquery.transform.js"></script>
-<script src="/js/menu.js"></script>
-
-<script src="/js/script.js"></script>
-<script src="/js/scrollUp.js"></script>
-
-  </div>
 </body>
 </html>
+
+
+
+
+
+<script>
+$(window).on('load', function(){
+   $('pre').addClass('prettyprint').attr('style', 'overflow:auto;');
+   prettyPrint();
+ });
+</script>
+
