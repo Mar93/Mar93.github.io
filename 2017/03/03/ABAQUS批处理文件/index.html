@@ -5,22 +5,28 @@
   
   <title>马佳腾的ABAQUS学习笔记</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这是我的第一篇博客标签（空格分隔）： 
+  <meta name="description" content="ABAQUS批处理文件标签： ABAQUS 批处理
 
-This is my first blog!">
+ABAQUS批处理能够对一个或多个inp文件进行提交计算，而批处理文件的建立也非常简单。首先，在inp文件所在文件夹建立一个start.txt的文本文档。如我的inp文件名分别为job-1.inp, job-2.inp。其次，对start.txt文档进行编辑，内容如下:
+call abaqus job=job-1 cpus=4 int
+call">
 <meta property="og:type" content="article">
 <meta property="og:title" content="马佳腾的ABAQUS学习笔记">
-<meta property="og:url" content="Mar93.github.io/2017/03/03/这是我的第一篇博客/index.html">
+<meta property="og:url" content="Mar93.github.io/2017/03/03/ABAQUS批处理文件/index.html">
 <meta property="og:site_name" content="马佳腾的ABAQUS学习笔记">
-<meta property="og:description" content="这是我的第一篇博客标签（空格分隔）： 
+<meta property="og:description" content="ABAQUS批处理文件标签： ABAQUS 批处理
 
-This is my first blog!">
-<meta property="og:updated_time" content="2017-03-03T09:39:07.096Z">
+ABAQUS批处理能够对一个或多个inp文件进行提交计算，而批处理文件的建立也非常简单。首先，在inp文件所在文件夹建立一个start.txt的文本文档。如我的inp文件名分别为job-1.inp, job-2.inp。其次，对start.txt文档进行编辑，内容如下:
+call abaqus job=job-1 cpus=4 int
+call">
+<meta property="og:updated_time" content="2017-03-03T11:51:07.166Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="马佳腾的ABAQUS学习笔记">
-<meta name="twitter:description" content="这是我的第一篇博客标签（空格分隔）： 
+<meta name="twitter:description" content="ABAQUS批处理文件标签： ABAQUS 批处理
 
-This is my first blog!">
+ABAQUS批处理能够对一个或多个inp文件进行提交计算，而批处理文件的建立也非常简单。首先，在inp文件所在文件夹建立一个start.txt的文本文档。如我的inp文件名分别为job-1.inp, job-2.inp。其次，对start.txt文档进行编辑，内容如下:
+call abaqus job=job-1 cpus=4 int
+call">
   
     <link rel="alternate" href="/atom.xml" title="马佳腾的ABAQUS学习笔记" type="application/atom+xml">
   
@@ -73,10 +79,10 @@ This is my first blog!">
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-这是我的第一篇博客" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-ABAQUS批处理文件" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/03/03/这是我的第一篇博客/" class="article-date">
-  <time datetime="2017-03-03T09:39:06.174Z" itemprop="datePublished">2017-03-03</time>
+    <a href="/2017/03/03/ABAQUS批处理文件/" class="article-date">
+  <time datetime="2017-03-03T11:51:05.761Z" itemprop="datePublished">2017-03-03</time>
 </a>
     
   </div>
@@ -85,14 +91,20 @@ This is my first blog!">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="这是我的第一篇博客"><a href="#这是我的第一篇博客" class="headerlink" title="这是我的第一篇博客"></a>这是我的第一篇博客</h1><p>标签（空格分隔）： </p>
+        <h1 id="ABAQUS批处理文件"><a href="#ABAQUS批处理文件" class="headerlink" title="ABAQUS批处理文件"></a>ABAQUS批处理文件</h1><p>标签： ABAQUS 批处理</p>
 <hr>
-<p>This is my first <strong>blog</strong>!</p>
+<p>ABAQUS批处理能够对一个或多个inp文件进行提交计算，而批处理文件的建立也非常简单。<br>首先，在inp文件所在文件夹建立一个start.txt的文本文档。如我的inp文件名分别为job-1.inp, job-2.inp。<br>其次，对start.txt文档进行编辑，内容如下:</p>
+<pre><code>call abaqus job=job-1 cpus=4 int
+call abaqus job=job-2 cpus=4 int
+pause
+</code></pre><p>最后，讲start.txt的后缀改为bat 双击运行即可。</p>
+<p>其中int 为interactive，可实现多个job依次运行，去掉int的话多个job同事运行。pause 目的是在计算完成或者出错以后黑窗不被马上关闭，可以看到出错的原因。当然，即便是黑窗被关掉我们也可以通过查看与任务同名的.dat，.sta，.mag文件查看计算过程中出现警告和错误。<br>另外在计算过程中可以随时打开.odb文件查看计算进度。</p>
+<p>ps:对于abaqus不是内部命令问题的解决可以将abaqus.bat文件的路径添加到系统环境路径即可。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="Mar93.github.io/2017/03/03/这是我的第一篇博客/" data-id="ciztrfw4000017ohkx1wkk02k" class="article-share-link">Share</a>
+      <a data-url="Mar93.github.io/2017/03/03/ABAQUS批处理文件/" data-id="ciztrfw3q00007ohk0n2swee5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -101,15 +113,11 @@ This is my first blog!">
     
 <nav id="article-nav">
   
-    <a href="/2017/03/03/ABAQUS批处理文件/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
   
+    <a href="/2017/03/03/这是我的第一篇博客/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
   
 </nav>
 
