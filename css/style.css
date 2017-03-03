@@ -187,11 +187,6 @@ body {
     margin: 0 0.833333333333333%;
   }
 }
-@media screen and (min-width: 768px) {
-  #main {
-    float: right;
-  }
-}
 .article-date,
 .article-category-link,
 .archive-year,
@@ -1171,6 +1166,9 @@ a.article-title:hover {
 }
 .article-entry .highlight .line {
   height: 22.400000000000002px;
+}
+.article-entry .highlight .line.marked {
+  background: #515151;
 }
 .article-entry .gist {
   margin: 0 -20px;
