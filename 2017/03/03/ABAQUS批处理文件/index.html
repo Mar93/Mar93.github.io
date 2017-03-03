@@ -1,171 +1,82 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta charset="utf-8">
+  
   <title>马佳腾的ABAQUS学习笔记</title>
-  <meta name="description" content="关于ABAQUS二次开发、子程序、子模型等" />
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="MobileOptimized" content="320" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="/css/component.css" />
-  <link rel="stylesheet" type="text/css" href="/css/screen.css" />
-  <meta name="generator" content="马佳腾的ABAQUS学习笔记">
-  <script src="http://static.duoshuo.com/embed.js"></script>
-  
-  
-  
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="ABAQUS批处理文件标签： ABAQUS 批处理
 
-  
+ABAQUS批处理能够对一个或多个inp文件进行提交计算，而批处理文件的建立也非常简单。首先，在inp文件所在文件夹建立一个start.txt的文本文档。如我的inp文件名分别为job-1.inp, job-2.inp。其次，对start.txt文档进行编辑，内容如下:
+call abaqus job=job-1 cpus=4 int
+call">
+<meta property="og:type" content="article">
+<meta property="og:title" content="马佳腾的ABAQUS学习笔记">
+<meta property="og:url" content="Mar93.github.io/2017/03/03/ABAQUS批处理文件/index.html">
+<meta property="og:site_name" content="马佳腾的ABAQUS学习笔记">
+<meta property="og:description" content="ABAQUS批处理文件标签： ABAQUS 批处理
 
+ABAQUS批处理能够对一个或多个inp文件进行提交计算，而批处理文件的建立也非常简单。首先，在inp文件所在文件夹建立一个start.txt的文本文档。如我的inp文件名分别为job-1.inp, job-2.inp。其次，对start.txt文档进行编辑，内容如下:
+call abaqus job=job-1 cpus=4 int
+call">
+<meta property="og:updated_time" content="2017-03-03T11:51:07.166Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="马佳腾的ABAQUS学习笔记">
+<meta name="twitter:description" content="ABAQUS批处理文件标签： ABAQUS 批处理
+
+ABAQUS批处理能够对一个或多个inp文件进行提交计算，而批处理文件的建立也非常简单。首先，在inp文件所在文件夹建立一个start.txt的文本文档。如我的inp文件名分别为job-1.inp, job-2.inp。其次，对start.txt文档进行编辑，内容如下:
+call abaqus job=job-1 cpus=4 int
+call">
+  
+    <link rel="alternative" href="/atom.xml" title="马佳腾的ABAQUS学习笔记" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
 </head>
 <body>
-<div class="container">
-    <div class="mp-pusher" id="mp-pusher">
-        <i id="scroll-up" class="fa fa-angle-up"></i>
-        <nav id="mp-menu" class="mp-menu">
-            <div class="mp-level">
-                <a data-pjax class="back-home" style="font-size: 20px" href="/"><h2 ><i class="fa fa-home"></i>
-                        Home</h2></a>
-                <ul class="first-level">
-                    <li>
-                        <a class="fa fa-archive" href="#"><i class="fa fa-angle-left">
-                            </i>&nbsp;&nbsp;Archive</a>
-                        <div class="mp-level page-list">
-                            <h2 ><i class="fa fa-archive"></i>
-                                Archive</h2>
-                            <a class="mp-back" href="#">back</a>
-                            <form id="search-form" action="">
-                                <input type="text" class="search search-archive" placeholder="Search.."/>
-                            </form>
-                            <ul>
-                                <div class="mp-scroll">
-                                
-                                <li class="search-archive-li mp-pjax">
-                                    <a href="/2017/03/03/ABAQUS批处理文件/"></a>
-                                </li>
-                                
-                                <li class="search-archive-li mp-pjax">
-                                    <a href="/2017/03/03/这是我的第一篇博客/"></a>
-                                </li>
-                                
-                                </div>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a class="fa fa-copy" href="#"><i class="fa fa-angle-left">
-                            </i>&nbsp;&nbsp;Categories</a>
-
-                        <div class="mp-level page-list">
-                            <h2 ><i class="fa fa-copy"></i>
-                                Categories</h2>
-                            <a class="mp-back" href="#">back</a>
-                            <form id="search-form" action="">
-                                <input type="text" class="search search-category" placeholder="Search.."/>
-                            </form>
-                            <ul>
-                                <div class="mp-scroll">
-                                
-                                </div>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a class="fa fa-tags" href="#"><i class="fa fa-angle-left">
-                            </i>&nbsp;&nbsp;Tags</a>
-                        <div class="mp-level page-list">
-                            <h2 ><i class="fa fa-tags"></i>
-                                Tags</h2>
-                            <a class="mp-back" href="#">back</a>
-                            <form id="search-form" action="">
-                                <input type="text" class="search search-tag" placeholder="Search.."/>
-                            </form>
-                            <ul>
-                                <div class="mp-scroll">
-                                
-                                </div>
-                            </ul>
-                        </div>
-                    </li>
-                    
-                    <li>
-                        <a class="fa fa-weibo" href="#"><i class="fa fa-angle-left"></i>&nbsp;&nbsp;Weibo Show</a>
-
-                        <div class="mp-level page-list">
-                            <h2 ><i class="fa fa-weibo"></i>
-                                Weibo Show</h2>
-                            <a class="mp-back" href="#">back</a>
-                        </div>
-                    </li>
-                    
-                    <li class="mp-pjax"><a class="fa fa-user" href="/about">&nbsp;&nbsp;&nbsp;About me</a></li>
-                    <li><a class="fa fa-github" href="#">&nbsp;&nbsp;&nbsp;Github</a></li>
-
-                </ul>
-
-            </div>
-        </nav>
-        <div id="pjax">
-            <div class="pjax-hidden" style="display: none">
-                
-                    <a  data-pjax href="/2017/03/03/ABAQUS批处理文件/"></a>
-                
-                    <a  data-pjax href="/2017/03/03/这是我的第一篇博客/"></a>
-                
-                
-                
-                <a data-pjax class="fa fa-user" href="/about">&nbsp;&nbsp;&nbsp;About me</a>
-            </div>
-            <nav class="nexus">
-                <li  style="border-left: 1px solid #c6d0da;">
-                    <a id="trigger" href="#"><i class="fa fa-bars"></i></a>
-                </li>
-                <li ><a id="nexus-back" data-pjax href="/">马佳腾的ABAQUS学习笔记</a></li>
-                
-                <div id="nav-container">
-                    <div class="post-navbar" style="line-height: 63px;display:none">
-                        <li id="navbar-title"><a href="#"></a></li>
-                        <li id="navbar-toc" style="border-left: none">
-                            <a style="padding-right: 15px">
-                                <span id="toc-content" >Introduction</span><i class="fa fa-chevron-down" ></i>
-                            </a>
-                            <div class="hidden-box">
-                                <ul id="toc"></ul>
-                            </div>
-                        </li>
-                    </div>
-                </div>
-                
-            </nav>
-
-            <div class="scroller">
-            <div class="scroller-inner">
-
-
-<!-- -->
-<!--<body class="post-template">-->
-<!---->
-  
-
-<main class="content" role="main">
-    <article class="post" >
-    <span class="post-meta">
-                  <div class="tag-tile">
-                      
-                  </div>
-                <h1 class="post-title" style="margin: 14px 0;color:#50585D"></h1>
-
-                    <div class="post-meta">
-                        Post on<span class="fa fa-clock-o"></span>
-                        <time datetime="2017-03-03T11:51:05.761Z"
-                              itemprop="datePublished">2017-03-03</time>
-                    </div>
-    </span>
-
-        <section class="post-content">
-            <h1 id="ABAQUS批处理文件"><a href="#ABAQUS批处理文件" class="headerlink" title="ABAQUS批处理文件"></a>ABAQUS批处理文件</h1><p>标签： ABAQUS 批处理</p>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">马佳腾的ABAQUS学习笔记</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/">Home</a></li><li><a href="/archives">Archives</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="Mar93.github.io"></form>
+	</div>
+</header>
+    <div id="main">
+      <article id="post-ABAQUS批处理文件" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/03/03/ABAQUS批处理文件/" class="article-date">
+  <time datetime="2017-03-03T11:51:05.761Z" itemprop="datePublished">2017-03-03</time>
+</a>
+		</span>
+		<span class="meta-elements author">马佳腾</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+	</header>
+	<div class="entry-content">
+		
+    	<h1 id="ABAQUS批处理文件"><a href="#ABAQUS批处理文件" class="headerlink" title="ABAQUS批处理文件"></a>ABAQUS批处理文件</h1><p>标签： ABAQUS 批处理</p>
 <hr>
 <p>ABAQUS批处理能够对一个或多个inp文件进行提交计算，而批处理文件的建立也非常简单。<br>首先，在inp文件所在文件夹建立一个start.txt的文本文档。如我的inp文件名分别为job-1.inp, job-2.inp。<br>其次，对start.txt文档进行编辑，内容如下:</p>
 <pre><code>call abaqus job=job-1 cpus=4 int
@@ -175,71 +86,67 @@ pause
 <p>其中int 为interactive，可实现多个job依次运行，去掉int的话多个job同事运行。pause 目的是在计算完成或者出错以后黑窗不被马上关闭，可以看到出错的原因。当然，即便是黑窗被关掉我们也可以通过查看与任务同名的.dat，.sta，.mag文件查看计算过程中出现警告和错误。<br>另外在计算过程中可以随时打开.odb文件查看计算进度。</p>
 <p>ps:对于abaqus不是内部命令问题的解决可以将abaqus.bat文件的路径添加到系统环境路径即可。</p>
 
-        </section>
-        <hr/>
-        <nav class="pagination" style="width:auto" role="pagination">
-            
-            <a style="cursor:default" class="newer-posts" href="#">This is the First Post</a>
-            
-            <a class="share-button" data-original-title title>Share this Post</a>
-            
-            <a data-pjax class="older-posts" href="/2017/03/03/这是我的第一篇博客/">Next Post →</a>
-            
-        </nav>
-        <br/>
-        <br/>
-        <section id="comment">
-            <div id="comment-box"></div>
-        </section>
-
-
-    </article>
-</main>
-
-
-  
-<footer class="site-footer">
     
-    <div class="inner">
-        <section class="copyright"><a href="/"></a> &copy; 马佳腾的ABAQUS学习笔记 2014</section>
-        <section class="poweredby">Published with <a target="_blank" href="http://hexo.io/">Hexo   </a> and Theme by <a target="_blank" href="https://github.com/yuche/hexo-theme-kael">Kael</a></section>
-    </div>
-</footer>
-</div>
-</div><!-- /scroller -->
-
-</div><!-- /pusher -->
-</div><!-- /container -->
-</div>
-
-<!-- Easter eggs -->
-
-<div class="egg animated">
-    <a id="close-button" href="#">X</a>
-    <div class="block">
-        <div class="loading">
-            <span class="ball1"></span>
-            <span class="ball2"></span>
-        </div>
-    </div>
-</div>
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+			</span>
+		</div>
+	</footer>
+	
+    
+<nav id="article-nav">
   
-<script src="//cdn.staticfile.org/jquery/1.11.0/jquery.min.js"></script>
-<script>
-    if (!window.jQuery) {
-        var script = document.createElement('script');
-        script.src = "/js/jquery.min.js";
-        document.body.appendChild(script);
-    }
-</script>
-<script type="text/javascript" src="/js/lib.js"></script>
-<script type="text/javascript" src="/js/main.js"></script>
+  
+    <a href="/2017/03/03/这是我的第一篇博客/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+</nav>
+
+  
+</article>
 
 
 
 
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:Mar93.github.io">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">马佳腾的ABAQUS学习笔记</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2017 马佳腾<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
 
+
+<script src="/js/script.js"></script>
+  </div>
 </body>
 </html>
